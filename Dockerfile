@@ -21,4 +21,4 @@ RUN apk add --no-cache php7.1-pdo_mysql \
     && curl -o /var/www/app/index.php -OL https://github.com/vrana/adminer/releases/download/v4.3.1/adminer-$ADMINER_VER.php \
     && chown -R 82 /var/www/app
 
-COPY adminer /
+COPY etc /etc
