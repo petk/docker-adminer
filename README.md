@@ -11,7 +11,45 @@ The following list contains all current Docker tags and what is included in each
 | System | Docker Tag | Features | Size |
 | ------ | ---------- | -------- | ---- |
 | **PHP 7.1.7**@Alpine 3.6 | [`latest`](https://github.com/petk/docker-adminer/tree/master/Dockerfile) | Adminer 4.3.1, PHP 7.1, PDO MySQL, PDO PostgreSQL, PDO Sqlite, Nginx | [![](https://images.microbadger.com/badges/image/petk/adminer.svg)](https://microbadger.com/images/petk/adminer "Image size") |
-|
+
+## Usage
+
+Create a `docker-compose.yml` file and add the Adminer service:
+
+```yaml
+version: '3.3'
+
+services:
+  adminer:
+    build:
+      context: ../../
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:80
+    links:
+      - db
+  db:
+    image: mariadb:10.2
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: example-db
+```
+
+Run:
+
+```bash
+docker-compose up
+```
+
+and visit `http://localhost:8080` with server `db`, username `root` and password
+`password`.
+
+## Base image
+
+[PHP.earth PHP](https://github.com/php-earth/docker-php) is used for the base
+image.
 
 ## Building images
 
