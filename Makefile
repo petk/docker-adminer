@@ -1,4 +1,4 @@
-PHONY: test
+PHONY: help test
 .DEFAULT_GOAL := help
 
 help: ## Output usage documentation

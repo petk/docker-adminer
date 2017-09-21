@@ -16,7 +16,7 @@ ENV \
     # Adminer version
     ADMINER_VER=4.3.1
 
-RUN apk add --no-cache php7.1-pdo_mysql php7.1-pdo_pgsql php7.1-pdo_sqlite \
+RUN apk add --no-cache php7.1-pdo_mysql php7.1-pdo_pgsql php7.1-pdo_sqlite php7.1-mongodb \
     && mkdir -p /var/www/app \
     && curl -o /var/www/app/index.php -OL https://github.com/vrana/adminer/releases/download/v4.3.1/adminer-$ADMINER_VER.php \
     && chown -R 82 /var/www/app
