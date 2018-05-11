@@ -11,18 +11,18 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
-[{hooks/build}]
+[hooks/build]
 indent_style = space
-indent_size = 2
+indent_size = 4
 
 [Dockerfile]
 indent_style = space
 indent_size = 4
 
-[*.yml]
+[*.{yml,yaml}]
 indent_style = space
 indent_size = 2
 
-[{Makefile}]
+[Makefile]
 indent_style = tab
 indent_size = 4
