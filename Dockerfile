@@ -1,4 +1,4 @@
-FROM phpearth/php:7.1-nginx
+FROM phpearth/php:7.2-nginx
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -14,11 +14,13 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 ENV \
     # Adminer version
-    ADMINER_VER=4.3.1
+    ADMINER_VER=4.6.3
 
-RUN apk add --no-cache php7.1-pdo_mysql php7.1-pdo_pgsql php7.1-pdo_sqlite php7.1-mongodb \
+RUN apk add --no-cache php7.2-pdo_mysql php7.2-pdo_pgsql php7.2-pdo_sqlite php7.2-mongodb \
     && mkdir -p /var/www/app \
-    && curl -o /var/www/app/index.php -OL https://github.com/vrana/adminer/releases/download/v4.3.1/adminer-$ADMINER_VER.php \
+    && curl -o /var/www/app/index.php -OL https://github.com/vrana/adminer/releases/download/v$ADMINER_VER/adminer-$ADMINER_VER.php \
     && chown -R 82 /var/www/app
 
 COPY etc /etc
+
+EXPOSE 80
