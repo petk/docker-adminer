@@ -1,4 +1,4 @@
-FROM phpearth/php:7.2-nginx
+FROM phpearth/php:7.3-nginx
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -14,12 +14,16 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 ENV \
     # Adminer version
-    ADMINER_VER=4.6.3
+    ADMINER_VER=4.7.0
 
-RUN apk add --no-cache php7.2-pdo_mysql php7.2-pdo_pgsql php7.2-pdo_sqlite php7.2-mongodb \
+RUN apk add --no-cache php7.3-pdo_mysql php7.3-pdo_pgsql php7.3-pdo_sqlite php7.3-mongodb \
     && mkdir -p /var/www/app \
     && curl -o /var/www/app/index.php -OL https://github.com/vrana/adminer/releases/download/v$ADMINER_VER/adminer-$ADMINER_VER.php \
-    && chown -R 82 /var/www/app
+    && chown -R 82 /var/www/app \
+    && cp /etc/php/7.3/php.ini-production /etc/php/7.3/php.ini \
+    && echo "memory_limit = 512M" >> /etc/php/7.3/php.ini \
+    && echo "upload_max_filesize = 100M" >> /etc/php/7.3/php.ini \
+    && echo "post_max_size = 120M" >> /etc/php/7.3/php.ini
 
 COPY etc /etc
 
