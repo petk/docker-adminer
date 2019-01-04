@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file. This projec
 
 * ...
 
-## [v0.0.2 2019-01-04
+## [v0.0.2] 2019-01-04
 
 * PHP 7.3.0
 * Adminer 4.7.0
