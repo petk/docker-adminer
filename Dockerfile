@@ -23,7 +23,8 @@ RUN apk add --no-cache php7.3-pdo_mysql php7.3-pdo_pgsql php7.3-pdo_sqlite php7.
     && cp /etc/php/7.3/php.ini-production /etc/php/7.3/php.ini \
     && echo "memory_limit = 512M" >> /etc/php/7.3/php.ini \
     && echo "upload_max_filesize = 1000M" >> /etc/php/7.3/php.ini \
-    && echo "post_max_size = 1200M" >> /etc/php/7.3/php.ini
+    && echo "post_max_size = 1200M" >> /etc/php/7.3/php.ini \
+    && echo "max_execution_time = 600" >> /etc/php/7.3/php.ini
 
 COPY etc /etc
 
