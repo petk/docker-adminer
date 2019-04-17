@@ -10,7 +10,7 @@ The following list contains all current Docker tags and what is included in each
 
 | System | Docker Tag | Features | Size |
 | ------ | ---------- | -------- | ---- |
-| **PHP 7.3.3**@Alpine 3.9 | [`latest`](https://github.com/petk/docker-adminer/tree/master/Dockerfile) | Adminer 4.7.1, PHP 7.3, PDO MySQL, PDO PostgreSQL, PDO Sqlite, Nginx | [![](https://images.microbadger.com/badges/image/petk/adminer.svg)](https://microbadger.com/images/petk/adminer "Image size") |
+| **PHP 7.3.4**@Alpine 3.9 | [`latest`](https://github.com/petk/docker-adminer/tree/master/Dockerfile) | Adminer 4.7.1, PHP 7.3, PDO MySQL, PDO PostgreSQL, PDO Sqlite, Nginx | [![](https://images.microbadger.com/badges/image/petk/adminer.svg)](https://microbadger.com/images/petk/adminer "Image size") |
 
 ## Usage
 
@@ -48,7 +48,7 @@ and visit `http://localhost:8080` with server `db`, username `root` and password
 
 ## Base image
 
-[PHP.earth PHP](https://github.com/php-earth/docker-php) is used for the base
+[PHP.earth PHP](https://github.com/phpearth/docker-php) is used for the base
 image.
 
 ## Building images
