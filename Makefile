@@ -12,3 +12,6 @@ test: ## Run all tests; Usage: make test [t="<test-folder-1> <test-folder-2> ...
 
 build: ## Build Docker image
   docker build --no-cache --pull -t petk/adminer -f Dockerfile .
+
+push: ## Push Docker image to Docker Hub
+  docker push petk/adminer
