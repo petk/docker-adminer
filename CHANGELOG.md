@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file. This projec
 
 * ...
 
+## [v0.0.4] 2019-03-11
+
+* PHP 7.3.4
+
 ## [v0.0.3] 2019-03-11
 
 * PHP 7.3.3
