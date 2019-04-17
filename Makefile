@@ -1,5 +1,5 @@
 .RECIPEPREFIX +=
-PHONY: help test
+PHONY: help test build push
 .DEFAULT_GOAL := help
 
 help: ## Output usage documentation
