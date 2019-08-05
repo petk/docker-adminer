@@ -14,7 +14,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 ENV \
     # Adminer version
-    ADMINER_VER=4.7.1
+    ADMINER_VER=4.7.2
 
 RUN apk add --no-cache php7.3-pdo_mysql php7.3-pdo_pgsql php7.3-pdo_sqlite php7.3-mongodb \
     && mkdir -p /var/www/app \
