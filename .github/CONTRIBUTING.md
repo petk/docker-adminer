@@ -7,14 +7,14 @@ this repository.
 * Create a separate branch, for instance `patch-1` so you will not need to rebase
   your fork if your master branch is merged
 
-  ```bash
+  ```sh
   git clone git@github.com:your_username/docker-adminer
   cd docker-adminer
   git checkout -b patch-1
   ```
 * Make changes, commit them and push to your fork
 
-  ```bash
+  ```sh
   git add .
   git commit -m "Fix bug"
   git push origin patch-1
@@ -51,9 +51,9 @@ new version (e.g. 1.x.y) is released by the following release process:
 
 * **1. Tests**
 
-  Tests are run with [Goss](https://github.com/aelsabbahy/goss):
+  Tests are run with [Goss](https://github.com/goss-org/goss):
 
-  ```bash
+  ```sh
   make test [t="<test-folder-1> <test-folder-2> ..."]
   ```
 
