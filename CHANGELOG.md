@@ -4,9 +4,12 @@ All notable changes to this project will be documented in this file. This projec
 [keeps a CHANGELOG](http://keepachangelog.com/) and adheres to
 [Semantic Versioning](http://semver.org/).
 
-## [UNREALEASED] 2019-01-01
+## [UNREALEASED] 2023-01-01
 
 * ...
+* Adminer 4.8.1
+* Alpine 3.18
+* Alpine PHP 8.2 packages
 
 ## [v0.0.5] 2019-08-05
 
