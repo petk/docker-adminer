@@ -7,6 +7,9 @@ All notable changes to this project will be documented in this file. This projec
 ## [UNREALEASED] 2023-01-01
 
 * ...
+
+## [v1.0.0] 2023-05-11
+
 * Adminer 4.8.1
 * Alpine 3.18
 * Alpine PHP 8.2 packages
