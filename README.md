@@ -1,6 +1,8 @@
 # Adminer with Docker
 
-[![Build Status](https://img.shields.io/travis/petk/docker-adminer/master.svg?style=plastic)](https://travis-ci.org/petk/docker-adminer) [![Docker Automated build](https://img.shields.io/docker/automated/petk/adminer.svg?style=plastic)](https://hub.docker.com/r/petk/adminer/) [![MIT License](https://img.shields.io/github/license/petk/docker-adminer.svg?style=plastic "MIT License")](https://github.com/petk/docker-adminer/blob/master/LICENSE)
+![Test workflow](https://github.com/petk/docker-pandoc/actions/workflows/test.yaml/badge.svg)
+[![Docker Automated build](https://img.shields.io/docker/automated/petk/adminer.svg?style=plastic)](https://hub.docker.com/r/petk/adminer/)
+[![MIT License](https://img.shields.io/github/license/petk/docker-adminer.svg?style=plastic "MIT License")](https://github.com/petk/docker-adminer/blob/master/LICENSE)
 
 Adminer with Docker
 
@@ -8,9 +10,9 @@ Adminer with Docker
 
 The following list contains all current Docker tags and what is included in each.
 
-| System | Docker Tag | Features | Size |
-| ------ | ---------- | -------- | ---- |
-| **PHP 7.3.4**@Alpine 3.9 | [`latest`](https://github.com/petk/docker-adminer/tree/master/Dockerfile) | Adminer 4.7.1, PHP 7.3, PDO MySQL, PDO PostgreSQL, PDO Sqlite, Nginx | [![](https://images.microbadger.com/badges/image/petk/adminer.svg)](https://microbadger.com/images/petk/adminer "Image size") |
+| System | Docker Tag | Features |
+| ------ | ---------- | -------- |
+| **PHP 8.2**@Alpine 3.18 | [`latest`](https://github.com/petk/docker-adminer/tree/master/Dockerfile) | Adminer 4.8.1, PHP 8.2, PDO MySQL, PDO PostgreSQL, PDO Sqlite, Nginx |
 
 ## Usage
 
@@ -46,22 +48,9 @@ docker-compose up
 and visit `http://localhost:8080` with server `db`, username `root` and password
 `password`.
 
-## Base image
-
-[PHP.earth PHP](https://github.com/phpearth/docker-php) is used for the base
-image.
-
 ## Building images
 
-Images are automatically build on [Docker Hub](https://hub.docker.com/r/petk/adminer/).
-
-Docker Cloud and therefore Docker Hub also provides
-[overriding and customization](https://docs.docker.com/docker-cloud/builds/advanced/)
-of various commands when building images automatically.
-
-There are some hooks defined in the `docker/hooks` folder:
-
-* `hooks/build` - executed when building image
+Images are automatically build using GitHub actions and pushed to [Docker Hub](https://hub.docker.com/r/petk/adminer/).
 
 ### Labels
 
